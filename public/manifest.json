@@ -1,0 +1,16 @@
+{
+  "name": "MenuQuote - Catering Menu & Quotation Platform",
+  "short_name": "MenuQuote",
+  "description": "Build menus. Create quotations. Win events.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF9FC",
+  "theme_color": "#7C5CFC",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192' fill='%237C5CFC'><rect width='192' height='192' rx='36' fill='%237C5CFC'/><path d='M60 60h72v16H60zm0 28h72v16H60zm0 28h48v16H60z' fill='white'/></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    }
+  ]
+}
