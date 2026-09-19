@@ -5,6 +5,7 @@ import { TopHeader } from './TopHeader';
 import { MobileNav } from './MobileNav';
 import { ToastContainer } from '../common/Toast';
 import { DemoTourModal } from '../common/DemoTourModal';
+import { PwaInstallBanner } from '../common/PwaInstallBanner';
 
 // Pages
 import { DashboardPage } from '../../pages/DashboardPage';
@@ -53,19 +54,24 @@ export const AppShell: React.FC = () => {
 
   return (
     <div className="app-layout">
-      {/* Desktop Sidebar (1024px+) */}
-      <div className="hidden lg:block">
+      {/* Desktop Sidebar (Only visible on >=1024px desktop) */}
+      <div className="desktop-sidebar-wrapper desktop-only">
         <Sidebar />
       </div>
 
       {/* Main Content Area */}
       <div className="main-content">
         <TopHeader />
-        <main className="content-container">{renderActiveView()}</main>
+        <main className="content-container">
+          <PwaInstallBanner />
+          {renderActiveView()}
+        </main>
       </div>
 
-      {/* Mobile Bottom Navigation (<1024px) */}
-      <MobileNav />
+      {/* Mobile Bottom Navigation (Only visible on <1024px mobile/tablet) */}
+      <div className="mobile-nav-wrapper mobile-only">
+        <MobileNav />
+      </div>
 
       {/* Global Components */}
       <ToastContainer />
